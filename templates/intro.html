@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake posting Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<h3> Enter details to detect if a posting is fake</h3>
+<form action="/" method="POST">
+<table style="width:100%">
+    <tr>
+        <th>Has Company profile?(0/1)</th>
+        <th>Telecommuting?(0/1)</th>
+        <th>has logo?(0/1)</th>
+        <th>Has Questions?(0/1)</th>
+        <th>Has salary range?(0/1)</th>
+        <th>Required education?[5-18]</th>
+        <th>Fake posting?</th>
+    </tr>
+    <tr>
+        <td><input type="number" min="0" max="1" id="profile" name="profile"></td>
+        <td><input type="number" min="0" max="1"  id="commute" name="commute"></td>
+        <td><input type="number" min="0" max="1"  id="logo" name="logo"></td>
+        <td><input type="number" min="0" max="1"  id="questions" name="questions"></td>
+        <td><input type="number" min="0" max="1"  id="salary" name="salary"></td>
+        <td><input type="number" min="5" max="18"  id="education" name="education"></td>
+        <td><input type="text" id="posting" name="posting" readonly value={{output}}></td>
+    </tr>
+    <tr >
+        <td colspan = 7><input type="submit" value="Check"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
